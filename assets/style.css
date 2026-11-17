@@ -1,0 +1,39 @@
+/* Warna disamakan dengan aplikasi mobile Mapson (public/css/app.css milik mapsonapi). */
+:root {
+  --gold-400: #CBAF87;
+  --gold-500: #BC9E68;
+  --gold-050: #F7EFDD;
+  --muted: #6c757d;
+}
+
+body { background: #F8F3F6; }
+
+.sr-kepala { background: linear-gradient(135deg, #C9AD80, #BC9E68); color: #fff; padding: 1.25rem 1rem 3.5rem; }
+.sr-kepala img { height: 44px; background: #fff; border-radius: .6rem; padding: .25rem .4rem; }
+.sr-kepala h1 { font-size: 1.35rem; font-weight: 800; margin: .75rem 0 0; }
+.sr-kepala p { margin: 0; opacity: .95; font-size: .85rem; }
+
+.sr-isi { margin-top: -2.5rem; max-width: 720px; }
+.sr-kartu { background: #fff; border-radius: 1rem; box-shadow: 0 .125rem .25rem rgba(0,0,0,.075); padding: 1rem; margin-bottom: 1rem; }
+.sr-judul { font-weight: 800; margin-bottom: .75rem; }
+.sr-wajib::after { content: " *"; color: #dc3545; }
+
+.sr-jenis { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem; }
+.sr-jenis label { border: 1px solid #E2D7C3; border-radius: .75rem; padding: .6rem .75rem; display: flex; gap: .5rem; align-items: center; font-weight: 600; cursor: pointer; }
+.sr-jenis input:checked + span { color: #8A6A2F; }
+@media (min-width: 576px) { .sr-jenis { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+
+.sr-baris { border: 1px solid #dee2e6; border-radius: .6rem; padding: .5rem; margin-bottom: .5rem; }
+.sr-baris:only-child [data-hapus] { display: none; }
+
+/* Disembunyikan dari layar, bukan display:none — sebagian robot melewati isian display:none. */
+.sr-jebakan { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+
+.form-check-input:checked { background-color: var(--gold-500); border-color: var(--gold-500); }
+
+.btn-emas { background: var(--gold-500); border: 1px solid var(--gold-500); color: #fff; font-weight: 600; }
+.btn-emas:hover, .btn-emas:focus { background: var(--gold-400); border-color: var(--gold-400); color: #fff; }
+.btn-emas:disabled { background: var(--gold-400); border-color: var(--gold-400); color: #fff; opacity: .65; }
+
+.btn-outline-emas { background: #fff; border: 1px solid var(--gold-400); color: var(--gold-500); font-weight: 600; }
+.btn-outline-emas:hover, .btn-outline-emas:focus { background: var(--gold-050); color: var(--gold-500); }
